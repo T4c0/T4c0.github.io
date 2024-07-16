@@ -5,9 +5,9 @@ categories: [Projects]
 tags: [Fullstack,Project,backend]
 ---
 
-# Book Tracking App
+# A Capstone Project
 
-
+![img-description](/assets/lib/img/Book-Tracker-App/Screenshot%20(79).png)
 
 This documents the capstone project i did for DevMountain titled "Book Tracking App".I really liked this project because it showed how the front end and the back end of application work together.
 
