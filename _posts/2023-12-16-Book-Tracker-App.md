@@ -7,7 +7,8 @@ tags: [Fullstack,Project,backend]
 
 # A Capstone Project
 
-![img-description](/assets/img/Book-Tracker-App/Screenshot%20(79).png)
+ [![img-description](/assets/img/Book-Tracker-App/Screenshot%20(79).png)]
+{% include embed/{youtube}.html id='{IEjSUpX_GH4&t=54s}' %}
 
 This document highlights the capstone project I completed at DevMountain, titled "Book Tracking App." This project was particularly meaningful to me because it demonstrated how the front end and back end of an application work together seamlessly.
 
@@ -34,3 +35,4 @@ Real-Time Updates: Implementing AJAX calls to update the book list dynamically w
 User Authentication: Handling user authentication and authorization using JWT (JSON Web Tokens) for secure user authentication and session management.
 Conclusion:
 Completing the "Book Tracking App" was a rewarding experience that reinforced my understanding of full-stack development. It allowed me to apply theoretical knowledge in a practical setting and gain insights into the intricacies of web development. This project not only improved my technical skills but also boosted my confidence in building and deploying web applications. 
+
