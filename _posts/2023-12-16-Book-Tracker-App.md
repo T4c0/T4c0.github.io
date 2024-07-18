@@ -7,7 +7,7 @@ tags: [Fullstack,Project,backend]
 
 # A Capstone Project
 
-{% include embed/{youtube}.html id='{IEjSUpX_GH4&t=54s}' %}
+{% include embed/{youtube}.html id='{IEjSUpX_GH4&t}' %}
 
 This document highlights the capstone project I completed at DevMountain, titled "Book Tracking App." This project was particularly meaningful to me because it demonstrated how the front end and back end of an application work together seamlessly.
 
