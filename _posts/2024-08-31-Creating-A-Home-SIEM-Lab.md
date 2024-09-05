@@ -5,7 +5,7 @@ Categories: [Projects, Tutorial]
 Tags:       [Cybersecurity,Data,SIEM, SOC Analyst ] 
 ---
 
-![Elastic Dashboard](/assets/img/Creating%20Home%20SIEM%20Lab/Elastic_Dashboard.png)
+![Elastic Dashboard](/assets/img/Creating-20Home-20SIEM-20Lab/Elastic_Dashboard.png)
 
 # Security Information and Event Management (SIEM)
 
@@ -29,19 +29,19 @@ At its core, SIEM serves as the central hub for security operations, offering se
 1. Creating a Elastic free trial account (no credit card needed)
 [https://cloud.elastic.co/registration](https://cloud.elastic.co/registration)
 
-![Elastic Login](/assets/img/Creating%20Home%20SIEM%20Lab/Elastic_Login.png)
+![Elastic Login](/assets/img/Creating-20Home-20SIEM-20Lab/Elastic_Login.png)
 
 
 2. Once you have an Elastic account, log in to the Elastic Cloud console 
  [https://cloud.elastic.co](https://cloud.elastic.co)
 
 3. Click on the “Create Deployment” button and select “Elasticsearch” as the deployment type.
-![Create Deployment](/assets/img/Creating%20Home%20SIEM%20Lab/Create_Deployment.png)
+![Create Deployment](/assets/img/Creating-20Home-20SIEM-20Lab/Create_Deployment.png)
 
 4. Choose a region and deployment size that fits your needs and click on “Create Deployment.”
 5. Wait for the configuration to complete.
 6. Once the deployment is ready, click “continue.”
-![continue](/assets/img/Creating%20Home%20SIEM%20Lab/continue.png)
+![continue](/assets/img/Creating-20Home-20SIEM-20Lab/continue.png)
 
 ### Set up Kali VM
 
@@ -55,24 +55,24 @@ At its core, SIEM serves as the central hub for security operations, offering se
 An agent is basically a software tool that you install on a device, like a server or an endpoint, to gather and send data to a central system for monitoring and analysis. When it comes to Elastic SIEM, the agent’s job is to collect security-related events from your endpoints and then forward that info to your Elastic SIEM setup.
 
 1. Log in to your Elastic SIEM, then head to the Integrations page by clicking on the Kibana menu in the top left and selecting “Integrations” at the bottom.
-![Integrations](/assets/img/Creating%20Home%20SIEM%20Lab/Integration.png)
+![Integrations](/assets/img/Creating-20Home-20SIEM-20Lab/Integration.png)
 2. Search for “Elastic Defend” and click on it to open the integration page.
-![Elastic defend](/assets/img/Creating%20Home%20SIEM%20Lab/brows_integrations.png)
+![Elastic defend](/assets/img/Creating-20Home-20SIEM-20Lab/brows_integrations.png)
 3. Click on “Install Elastic Defend”
-![Click Elastic Agent](/assets/img/Creating%20Home%20SIEM%20Lab/Add_elastic_defend.png)
+![Click Elastic Agent](/assets/img/Creating-20Home-20SIEM-20Lab/Add_elastic_defend.png)
 
 >Note: It might look like this.
-![Alternative](/assets/img/Creating%20Home%20SIEM%20Lab/install_elastic_agent.png)
+![Alternative](/assets/img/Creating-20Home-20SIEM-20Lab/install_elastic_agent.png)
 4. Paste that command into the Kali terminal (command line).
-![Copy to clipboard](/assets/img/Creating%20Home%20SIEM%20Lab/copy_to_clipboard.png)
-![kali linux](/assets/img/Creating%20Home%20SIEM%20Lab/kali_linux.png)
+![Copy to clipboard](/assets/img/Creating-20Home-20SIEM-20Lab/copy_to_clipboard.png)
+![kali linux](/assets/img/Creating-20Home-20SIEM-20Lab/kali_linux.png)
 5. Wait for installation to complete, which should only take a few minutes, you’ll get a message saying “Elastic Agent has been successfully installed.” It’ll start collecting and sending logs to your Elastic SIEM right away, but keep in mind it might take a few minutes for the logs to show up in the SIEM. 
 
-![installation complete](/assets/img/Creating%20Home%20SIEM%20Lab/installed_complete.png)
+![installation complete](/assets/img/Creating-20Home-20SIEM-20Lab/installed_complete.png)
 
 You can check if the agent was installed correctly by running this command: ***sudo systemctl status elastic-agent.service***
 
-![check if running](/assets/img/Creating%20Home%20SIEM%20Lab/check_if_running.png)
+![check if running](/assets/img/Creating-20Home-20SIEM-20Lab/check_if_running.png)
 
 ## Generating Activity and Viewing Logs
 
@@ -90,21 +90,21 @@ To make sure the agent is working correctly, you can create some security-relate
 **Check the Logs section in the Elastic Cloud instance to see the results.**
 
 
-![Add integration](/assets/img/Creating%20Home%20SIEM%20Lab/Logs.png)
+![Add integration](/assets/img/Creating-20Home-20SIEM-20Lab/Logs.png)
 
 1. Inside Elastic deployment click the hamburger menu and under **"Observatory"** at the bottom click **"Logs"**
 
 
 > NOTE: make sure to click stream.
 
-![stream](/assets/img/Creating%20Home%20SIEM%20Lab/Logs_Stream.png)
+![stream](/assets/img/Creating-20Home-20SIEM-20Lab/Logs_Stream.png)
 
 2. Search for events by typing in the search bar. For example to  search for all logs related to Nmap scans, enter the query: ***event.action: “nmap_scan”*** or ***process.args: “sudo”***.
 
 3. The results of the search query will be displayed in the table below. You can click on the three dots next to each event to view more details.
 
-![search bar](/assets/img/Creating%20Home%20SIEM%20Lab/Stream_search.png)
-![3 dots](/assets/img/Creating%20Home%20SIEM%20Lab/3_dots.png)
+![search bar](/assets/img/Creating-20Home-20SIEM-20Lab/Stream_search.png)
+![3 dots](/assets/img/Creating-20Home-20SIEM-20Lab/3_dots.png)
 
 By creating and analyzing different security events in Elastic SIEM—like the one we just talked about—or by generating authentication failures, like entering the wrong password for a user or trying SSH logins with an incorrect password, you can get a better grasp of how security incidents are detected, investigated, and handled in real-world situations.
 
@@ -123,13 +123,13 @@ You can also dive into the visualizations and dashboards in the SIEM app to anal
 
 4. Select “Area” or “Line” as the visualization type, depending on your preference. This will create a chart that shows the count of events over time.
 
-![Area](/assets/img/Creating%20Home%20SIEM%20Lab/area_horizontal_vertical.png)
+![Area](/assets/img/Creating-20Home-20SIEM-20Lab/area_horizontal_vertical.png)
 
 5. In the “Metrics” section of the visualization editor on the right, select “Count” as the vertical field type and “Timestamp” for the horizontal field. This will show the count of events over time.
 
 6. Click on the “Save” button to save the visualization and then complete the rest of the settings.
 
-![Save Dashboard](/assets/img/Creating%20Home%20SIEM%20Lab/save_dashboard.png)
+![Save Dashboard](/assets/img/Creating-20Home-20SIEM-20Lab/save_dashboard.png)
 
 ### Create an Alert
 
@@ -137,7 +137,7 @@ In a SIEM, alerts are super important for catching security incidents and respon
 
 1. Click on the menu icon on the top-left, then under “Security,” click on “Alerts.”
 2. Click on “Manage rules” at the top right.
-![Create Alert](/assets/img/Creating%20Home%20SIEM%20Lab/security_alerts.png)
+![Create Alert](/assets/img/Creating-20Home-20SIEM-20Lab/security_alerts.png)
 
 3. Click on the “Create new rule” button at the top right.
 
@@ -145,13 +145,13 @@ In a SIEM, alerts are super important for catching security incidents and respon
 
 5. Under “Custom query,” set the conditions for the rule. You can use the following query to detect Nmap scan events. ***event.action:"nmap_scan"***
 
-![Custom Query](/assets/img/Creating%20Home%20SIEM%20Lab/custom_query.png)
+![Custom Query](/assets/img/Creating-20Home-20SIEM-20Lab/custom_query.png)
 
 6. Under the “About rule” section, give your rule a name and a description (Nmap Scan Detection).
 
 7. Set the severity level for the alert, which can help you prioritize alerts based on their importance. Keep all the other default settings under “Schedule rule” and click “Continue.”
 
-![Rule Action](/assets/img/Creating%20Home%20SIEM%20Lab/Rule_action.png)
+![Rule Action](/assets/img/Creating-20Home-20SIEM-20Lab/Rule_action.png)
 
 
 8. In the “Actions” section, select the action you want to take when the rule is triggered. You can choose to send an email notification, create a Slack message, or trigger a custom webhook.
